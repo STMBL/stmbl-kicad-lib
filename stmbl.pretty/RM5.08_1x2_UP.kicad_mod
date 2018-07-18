@@ -1,4 +1,4 @@
-(module stmbl:RM5.08_1x2_UP (layer F.Cu) (tedit 5B45E331)
+(module stmbl:RM5.08_1x2_UP (layer F.Cu) (tedit 5B4F837C)
   (fp_text reference P2 (at -0.34 5.848) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
@@ -13,8 +13,8 @@
   (pad 1 smd roundrect (at -2.54 0) (size 2.5 2.5) (layers B.Cu B.Mask) (roundrect_rratio 0.25)
     (zone_connect 2))
   (pad 2 smd roundrect (at 2.54 0) (size 2.5 2.5) (layers B.Cu B.Mask) (roundrect_rratio 0.25))
-  (pad 1 thru_hole circle (at -2.54 0) (size 1.5 1.5) (drill 1.2) (layers *.Cu *.Mask))
-  (pad 2 thru_hole circle (at 2.54 0) (size 1.5 1.5) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 1 thru_hole circle (at -2.54 0) (size 1.75 1.75) (drill 1.4) (layers *.Cu *.Mask))
+  (pad 2 thru_hole circle (at 2.54 0) (size 1.75 1.75) (drill 1.4) (layers *.Cu *.Mask))
   (model ${KIPRJMOD}/../lib/stmbl.pretty/akl230_2.wrl
     (offset (xyz -3.149999952691747 -1.999999969963014 0))
     (scale (xyz 0.394 0.394 0.394))
