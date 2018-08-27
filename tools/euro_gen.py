@@ -3,11 +3,16 @@ import sys
 
 pins = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-rm = 5.08
 
+rm = 5.08
 x_offset = 3.54
 y_offset_top = -2
 y_offset_bot = 10
+
+rm = 3.81
+x_offset = 2.3
+y_offset_top = -4
+y_offset_bot = 3
 
 pad_size = 2.5
 drill_pad_size = 1.8
@@ -16,7 +21,7 @@ drill_size = 1.5
 
 prefix = "RM"
 mid_fix = "_1x"
-post_fix = ""
+post_fix = "_UP"
 
 for pin in pins:
     x = (pin - 1) * rm + x_offset
