@@ -112,10 +112,10 @@ def eurostyle_RM350_up_gen(pins):
         f.write(header("stmbl", filename))
 
         # outline
-        f.write(line(-2.75, 3, rm * (pins - 1) + 2.75, 3))
-        f.write(line(-2.75, -4, rm * (pins - 1) + 2.75, -4))
-        f.write(line(-2.75, -4, -2.75, 3))
-        f.write(line(rm * (pins - 1) + 2.75, -4, rm * (pins - 1) + 2.75, 3))
+        f.write(line(-2.5, 3, rm * (pins - 1) + 2.5, 3))
+        f.write(line(-2.5, -4, rm * (pins - 1) + 2.5, -4))
+        f.write(line(-2.5, -4, -2.5, 3))
+        f.write(line(rm * (pins - 1) + 2.5, -4, rm * (pins - 1) + 2.5, 3))
 
         # plug outline
         f.write(line(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, 6.5, "Margin"))
@@ -149,10 +149,10 @@ def eurostyle_RM350_gen(pins):
         f.write(header("stmbl", filename))
 
         # outline
-        f.write(line(-2.75, 8, rm * (pins - 1) + 2.75, 8))
-        f.write(line(-2.75, -1.25, rm * (pins - 1) + 2.75, -1.25))
-        f.write(line(-2.75, -1.25, -2.75, 8))
-        f.write(line(rm * (pins - 1) + 2.75, -1.25, rm * (pins - 1) + 2.75, 8))
+        f.write(line(-2.5, 8, rm * (pins - 1) + 2.5, 8))
+        f.write(line(-2.5, -1.25, rm * (pins - 1) + 2.5, -1.25))
+        f.write(line(-2.5, -1.25, -2.5, 8))
+        f.write(line(rm * (pins - 1) + 2.5, -1.25, rm * (pins - 1) + 2.5, 8))
 
         # plug outline
         f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "Margin"))
@@ -179,10 +179,10 @@ def eurostyle_RM381_up_gen(pins):
         f.write(header("stmbl", filename))
 
         # outline
-        f.write(line(-2.75, 3, rm * (pins - 1) + 2.75, 3))
-        f.write(line(-2.75, -4, rm * (pins - 1) + 2.75, -4))
-        f.write(line(-2.75, -4, -2.75, 3))
-        f.write(line(rm * (pins - 1) + 2.75, -4, rm * (pins - 1) + 2.75, 3))
+        f.write(line(-2.5, 3, rm * (pins - 1) + 2.5, 3))
+        f.write(line(-2.5, -4, rm * (pins - 1) + 2.5, -4))
+        f.write(line(-2.5, -4, -2.5, 3))
+        f.write(line(rm * (pins - 1) + 2.5, -4, rm * (pins - 1) + 2.5, 3))
 
         # plug outline
         f.write(line(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, 6.5, "Margin"))
@@ -216,10 +216,10 @@ def eurostyle_RM381_gen(pins):
         f.write(header("stmbl", filename))
 
         # outline
-        f.write(line(-2.75, 8, rm * (pins - 1) + 2.75, 8))
-        f.write(line(-2.75, -1.25, rm * (pins - 1) + 2.75, -1.25))
-        f.write(line(-2.75, -1.25, -2.75, 8))
-        f.write(line(rm * (pins - 1) + 2.75, -1.25, rm * (pins - 1) + 2.75, 8))
+        f.write(line(-2.5, 8, rm * (pins - 1) + 2.5, 8))
+        f.write(line(-2.5, -1.25, rm * (pins - 1) + 2.5, -1.25))
+        f.write(line(-2.5, -1.25, -2.5, 8))
+        f.write(line(rm * (pins - 1) + 2.5, -1.25, rm * (pins - 1) + 2.5, 8))
 
         # plug outline
         f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "Margin"))
