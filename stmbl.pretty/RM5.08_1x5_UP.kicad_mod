@@ -1,4 +1,4 @@
-(module stmbl:RM5.08_1x5_UP (layer F.Cu) (tedit 5c692749)
+(module stmbl:RM5.08_1x5_UP (layer F.Cu) (tedit 5c8e8ef0)
   (fp_text reference P1 (at 0 2.5) (layer F.SilkS) hide (effects (font (size 1.5 1.5) (thickness 0.3))))
   (fp_text value RM5.08_1x5_UP (at 0 -2) (layer F.SilkS) hide (effects (font (size 1 1) (thickness 0.15))))
   (fp_line (start -3.5 3.75) (end 23.82 3.75) (layer F.SilkS) (width 0.15))

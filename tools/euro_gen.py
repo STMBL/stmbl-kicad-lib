@@ -33,6 +33,65 @@ def bot_pad(name, x, y, size):
     return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers B.Cu B.Mask) (roundrect_rratio 0.25))\n")
 
 
+def eurostyle_RM762_up_gen(pins):
+    rm = 7.62
+    filename = "RM" + str(rm) + "_1x" + str(pins) + "_UP"
+    pad_size = 2.5
+    drill_size = 1.7
+    drill_pad_size = drill_size + 0.3
+
+    with open(filename + ".kicad_mod", mode = "w+") as f:
+        f.write(header("stmbl", filename))
+
+        # outline
+        f.write(rect(-3.8, 3.75, rm * (pins - 1) + 3.8, -4.75))
+        f.write(line(-3.8, -4.5, rm * (pins - 1) + 3.8, -4.5))
+
+        # plug outline
+        f.write(rect(-rm / 2, 3.75, rm * (pins - 1) + rm / 2, -11.25, "Margin"))
+        
+        f.write(line(-rm / 2, -4, rm * (pins - 1) + rm / 2, -4))
+        f.write(line(-rm / 2, -4, -rm / 2, 2.5))
+        f.write(line(rm * (pins - 1) + rm / 2, -4, rm * (pins - 1) + rm / 2, 2.5))
+        
+        for i in range(pins):
+            f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
+            f.write(bot_pad(i, rm * i, 0, pad_size))
+            f.write(arc(rm * i, 0, rm * i - rm / 2, 2.5, -45))
+            f.write(arc(rm * i, 0, rm * i + rm / 2, 2.5, 45))
+
+            f.write(rect(rm * i - 1.25, 1, rm * i + 1.25, -1.25, "Margin"))
+
+        f.write(footer())
+
+
+def eurostyle_RM762_gen(pins):
+    rm = 7.62
+    filename = "RM" + str(rm) + "_1x" + str(pins)
+    pad_size = 2.5
+    drill_size = 1.7
+    drill_pad_size = drill_size + 0.3
+
+    with open(filename + ".kicad_mod", mode = "w+") as f:
+        f.write(header("stmbl", filename))
+
+        # outline
+        f.write(rect(-3.8, 10, rm * (pins - 1) + 3.8, -2))
+        f.write(line(-3.8, 7, rm * (pins - 1) + 3.8, 7))
+
+        # plug outline
+        f.write(line(-rm / 2, 20, rm * (pins - 1) + rm / 2, 20, "Margin"))
+        f.write(line(-rm / 2, 20, -rm / 2, 10, "Margin"))
+        f.write(line(rm * (pins - 1) + rm / 2, 20, rm * (pins - 1) + rm / 2, 10, "Margin"))
+        
+        for i in range(pins):
+            f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
+            f.write(bot_pad(i, rm * i, 0, pad_size))
+            f.write(circle(rm * i, 15, rm * i, 15 - 1.5, "Margin"))
+            f.write(line(rm * i - 1.5, 15, rm * i + 1.5, 15, "Margin"))
+
+        f.write(footer())
+
 def eurostyle_RM508_up_gen(pins):
     rm = 5.08
     filename = "RM" + str(rm) + "_1x" + str(pins) + "_UP"
@@ -202,7 +261,9 @@ def eurostyle_RM381_gen(pins):
         f.write(footer())
 
 
-for p in pins:
+for p in pins:    
+    eurostyle_RM762_up_gen(p)
+    eurostyle_RM762_gen(p)
     eurostyle_RM508_up_gen(p)
     eurostyle_RM508_gen(p)
     eurostyle_RM350_up_gen(p)
