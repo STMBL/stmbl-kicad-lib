@@ -1,4 +1,4 @@
-(module XT30PW-F (layer F.Cu) (tedit 5C8E8F5C)
+(module XT30PW-F (layer F.Cu) (tedit 5DA65047)
   (descr https://www.tme.eu/de/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf)
   (tags XT30)
   (fp_text reference REF** (at 0 5.5) (layer F.SilkS)
@@ -26,4 +26,9 @@
   (pad "" smd roundrect (at -5.5 5 180) (size 2 2) (layers B.Cu B.Mask) (roundrect_rratio 0.25))
   (pad "" thru_hole circle (at 5.5 5 180) (size 1.5 1.5) (drill 1.1) (layers *.Cu *.Mask))
   (pad "" thru_hole circle (at -5.5 5 180) (size 1.5 1.5) (drill 1.1) (layers *.Cu *.Mask))
+  (model /Users/crinq/sandbox/stmbl-kicad-lib/stmbl.pretty/XT30PW-F.STEP
+    (offset (xyz 0 -5.75 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 -90))
+  )
 )

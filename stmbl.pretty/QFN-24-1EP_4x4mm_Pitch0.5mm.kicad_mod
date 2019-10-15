@@ -1,4 +1,4 @@
-(module QFN-24-1EP_4x4mm_Pitch0.5mm (layer F.Cu) (tedit 5D0E159D)
+(module QFN-24-1EP_4x4mm_Pitch0.5mm (layer F.Cu) (tedit 5DA64C03)
   (descr "24-Lead Plastic Quad Flat, No Lead Package (MJ) - 4x4x0.9 mm Body [QFN]; (see Microchip Packaging Specification 00000049BS.pdf)")
   (tags "QFN 0.5")
   (attr smd)
@@ -50,7 +50,7 @@
   (pad 3 smd roundrect (at -1.95 -0.25) (size 0.85 0.3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 2 smd roundrect (at -1.95 -0.75) (size 0.85 0.3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 1 smd roundrect (at -1.95 -1.25) (size 0.85 0.3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-  (model ${KISYS3DMOD}/Housings_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_Pitch0.5mm.wrl
+  (model ${KISYS3DMOD}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.step
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
