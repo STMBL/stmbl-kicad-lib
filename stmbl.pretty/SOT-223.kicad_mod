@@ -1,4 +1,4 @@
-(module SOT-223 (layer F.Cu) (tedit 5AC57D33)
+(module SOT-223 (layer F.Cu) (tedit 5DA6496B)
   (descr "module CMS SOT223 4 pins")
   (tags "CMS SOT")
   (attr smd)
@@ -16,12 +16,12 @@
   (fp_line (start 4.572 -2.032) (end 4.572 2.032) (layer F.SilkS) (width 0.15))
   (fp_line (start 4.572 2.032) (end 2.286 3.556) (layer F.SilkS) (width 0.15))
   (fp_line (start 2.286 3.556) (end 1.524 3.556) (layer F.SilkS) (width 0.15))
-  (pad 1 smd roundrect (at -3.25 -2.25 270) (size 1 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25)
+  (pad 1 smd roundrect (at -3.25 -2.25 270) (size 1 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
     (zone_connect 2))
-  (pad 3 smd roundrect (at -3.25 2.25 270) (size 1 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25))
-  (pad 2 smd roundrect (at -3.25 0 270) (size 1 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25))
-  (pad 2 smd roundrect (at 3.25 0 270) (size 3.5 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25))
-  (model TO_SOT_Packages_SMD.3dshapes/SOT-223.wrl
+  (pad 3 smd roundrect (at -3.25 2.25 270) (size 1 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+  (pad 2 smd roundrect (at -3.25 0 270) (size 1 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+  (pad 2 smd roundrect (at 3.25 0 270) (size 3.5 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+  (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-223.step
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

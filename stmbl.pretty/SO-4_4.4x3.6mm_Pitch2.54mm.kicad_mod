@@ -1,4 +1,4 @@
-(module stmbl:SO-4_4.4x3.6mm_Pitch2.54mm (layer F.Cu) (tedit 5C33F1DF)
+(module SO-4_4.4x3.6mm_Pitch2.54mm (layer F.Cu) (tedit 5DA64843)
   (descr "4-Lead Plastic Small Outline (SO), see https://www.elpro.org/de/index.php?controller=attachment&id_attachment=339")
   (tags "SO SOIC 2.54")
   (attr smd)
@@ -31,8 +31,8 @@
   (pad 2 smd roundrect (at -3.15 1.27) (size 2 0.64) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 3 smd roundrect (at 3.15 1.27) (size 2 0.64) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 4 smd roundrect (at 3.15 -1.27) (size 2 0.64) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-  (model ${KISYS3DMOD}/Housings_SOIC.3dshapes/SO-4_4.4x3.6mm_Pitch2.54mm.wrl
-    (offset (xyz 0 0.01500000025472259 0))
+  (model ${KISYS3DMOD}/Package_SO.3dshapes/SO-4_4.4x3.6mm_P2.54mm.wrl
+    (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )

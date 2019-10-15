@@ -1,4 +1,4 @@
-(module TO-220FP-TOP-H-FLIP (layer F.Cu) (tedit 5B82D9C7)
+(module TO-220FP-TOP-H-FLIP (layer F.Cu) (tedit 5DA649F8)
   (descr "TO-220-3, Horizontal, RM 2.54mm")
   (tags "TO-220-3 Horizontal RM 2.54mm")
   (fp_text reference REF** (at 0 -21) (layer F.SilkS)
@@ -28,9 +28,9 @@
   (pad 1 thru_hole circle (at 2.54 0) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask))
   (pad 2 thru_hole circle (at 0 0) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask))
   (pad 3 thru_hole circle (at -2.54 0) (size 1.5 1.5) (drill 1) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/TO_SOT_Packages_THT.3dshapes/TO-220-3_Horizontal.wrl
-    (offset (xyz 2.539999961853027 0 0))
-    (scale (xyz 0.393701 0.393701 0.393701))
-    (rotate (xyz 0 0 0))
+  (model ${KISYS3DMOD}/Package_TO_SOT_THT.3dshapes/TO-220-3_Horizontal_TabUp.step
+    (offset (xyz 2.54 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 180))
   )
 )

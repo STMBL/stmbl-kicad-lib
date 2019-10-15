@@ -1,4 +1,4 @@
-(module C_1808 (layer F.Cu) (tedit 5AC5647C)
+(module C_1808 (layer F.Cu) (tedit 5DA64508)
   (descr "Capacitor SMD 1808, reflow soldering, AVX (see smccp.pdf)")
   (tags "capacitor 1808")
   (attr smd)
@@ -18,13 +18,13 @@
   (fp_line (start -3.1 1.2) (end 3.1 1.2) (layer F.CrtYd) (width 0.05))
   (fp_line (start -3.1 -1.2) (end -3.1 1.2) (layer F.CrtYd) (width 0.05))
   (fp_line (start 3.1 -1.2) (end 3.1 1.2) (layer F.CrtYd) (width 0.05))
-  (pad 2 smd roundrect (at 2 0) (size 1.5 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25)
+  (pad 2 smd roundrect (at 2 0) (size 1.5 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
     (solder_mask_margin 0.1) (zone_connect 2))
-  (pad 1 smd roundrect (at -2 0) (size 1.5 2) (layers F.Cu F.Paste F.Mask)(roundrect_rratio 0.25)
+  (pad 1 smd roundrect (at -2 0) (size 1.5 2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
     (solder_mask_margin 0.1) (zone_connect 2))
-  (model ${KIPRJMOD}/../lib/stmbl.pretty/cap_1808.wrl
+  (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_1806_4516Metric.step
     (at (xyz 0 0 0))
-    (scale (xyz 393.7 393.7 393.7))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )

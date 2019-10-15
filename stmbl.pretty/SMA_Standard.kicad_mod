@@ -1,4 +1,4 @@
-(module SMA_Standard (layer F.Cu) (tedit 5C9FF455)
+(module SMA_Standard (layer F.Cu) (tedit 5DA647DC)
   (descr "Diode SMA")
   (tags "Diode SMA")
   (attr smd)
@@ -31,9 +31,9 @@
   (pad 1 smd roundrect (at -2 0) (size 2.5 1.75) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 2 smd roundrect (at 2 0) (size 2.5 1.75) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
     (zone_connect 2))
-  (model ${KIPRJMOD}/../lib/stmbl.pretty/sma.wrl
+  (model ${KISYS3DMOD}/Diode_SMD.3dshapes/D_SMA.step
     (at (xyz 0 0 0))
-    (scale (xyz 393.7 393.7 393.7))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )

@@ -1,4 +1,4 @@
-(module C_Radial_D26_L45_P10 (layer F.Cu) (tedit 5C8CFD0B)
+(module C_Radial_D26_L45_P10 (layer F.Cu) (tedit 5DA645DB)
   (descr "Radial Electrolytic Capacitor Diameter 26mm x Length 45mm, Pitch 10mm")
   (tags "Electrolytic Capacitor")
   (fp_text reference C22 (at 0 -14.3) (layer F.SilkS)
@@ -15,7 +15,7 @@
   (pad 2 smd circle (at 5 0) (size 3 3) (layers B.Cu B.Mask)
     (zone_connect 2))
   (pad 1 smd roundrect (at -5 0) (size 3 3) (layers B.Cu B.Mask) (roundrect_rratio 0.4))
-  (model ${KISYS3DMOD}/Capacitors_THT.3dshapes/CP_Radial_D26.0mm_P10.00mm_SnapIn.step
+  (model ${KISYS3DMOD}/Capacitor_THT.3dshapes/CP_Radial_D25.0mm_P10.00mm_SnapIn.step
     (offset (xyz -5 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
