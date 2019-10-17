@@ -30,7 +30,7 @@ def th_pad(name, x, y, size, drill):
   return("  (pad " + str(name + 1) + " thru_hole circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (drill " + str(drill) + ") (layers *.Cu *.Mask))\n")
 
 def top_pad_rr(name, x, y, size_x, size_y):
-  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask) (roundrect_rratio 0.25))\n")
+  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask F.Paste) (roundrect_rratio 0.25))\n")
 
 def top_pad(name, x, y, size):
   return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers F.Cu F.Mask))\n")
