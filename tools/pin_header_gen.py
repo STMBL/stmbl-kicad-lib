@@ -30,7 +30,7 @@ def th_pad(name, x, y, size, drill):
   return("  (pad " + str(name + 1) + " thru_hole circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (drill " + str(drill) + ") (layers *.Cu *.Mask))\n")
 
 def top_pad_rr(name, x, y, size_x, size_y):
-  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask F.Paste) (roundrect_rratio 0.25))\n")
+  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask) (roundrect_rratio 0.25))\n")
 
 def top_pad(name, x, y, size):
   return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers F.Cu F.Mask))\n")
@@ -45,7 +45,8 @@ def bot_pad(name, x, y, size):
 def pin_RM254_up_gen(pins, rows):
   rm = 2.54
   filename = "Pin_Header_RM" + str(rm) + "_" + str(rows) + "x" + str(pins) + "_UP"
-  pad_size = 1.75
+  top_pad_size = 1.5
+  bot_pad_size = 1.75
   drill_size = 1
   drill_pad_size = drill_size + 0.3
 
@@ -59,10 +60,12 @@ def pin_RM254_up_gen(pins, rows):
     for r in range(rows):
       for i in range(pins):
         if r == 0 and i == 0:
-          f.write(bot_pad_rr(0, 0, 0, pad_size, pad_size))
+          f.write(bot_pad_rr(0, 0, 0, bot_pad_size, bot_pad_size))
+          f.write(top_pad_rr(0, 0, 0, top_pad_size, top_pad_size))
 
         else:
-          f.write(bot_pad(i * rows + r, r * rm, i * rm, pad_size))
+          f.write(bot_pad(i * rows + r, r * rm, i * rm, bot_pad_size))
+          f.write(top_pad(i * rows + r, r * rm, i * rm, top_pad_size))
 
         f.write(th_pad(i * rows + r, r * rm, i * rm, drill_pad_size, drill_size))
 
