@@ -2,7 +2,7 @@
 import sys
 import time
 
-pins = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+pins = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 
 def line(x0, y0, x1, y1, layer = "F.SilkS"):
   return("  (fp_line (start " + str(x0) + " " + str(y0) + ") (end "  + str(x1) + " " + str(y1) + ") (layer " + layer + ") (width 0.15))\n")
