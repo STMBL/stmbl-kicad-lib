@@ -2,7 +2,7 @@
 import sys
 import time
 
-pins = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+pins = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 
 def line(x0, y0, x1, y1, layer = "F.SilkS"):
   return("  (fp_line (start " + str(x0) + " " + str(y0) + ") (end "  + str(x1) + " " + str(y1) + ") (layer " + layer + ") (width 0.15))\n")
@@ -56,6 +56,71 @@ def pin_RM254_up_gen(pins, rows):
     # outline
     f.write(rect(-rm / 2, -rm / 2, (rows - 1) * rm + rm / 2, rm * (pins - 1) + rm / 2))
     f.write(rect(-rm / 2, -rm / 2, rm / 2, rm / 2))
+    
+    for r in range(rows):
+      for i in range(pins):
+        if r == 0 and i == 0:
+          f.write(bot_pad_rr(0, 0, 0, bot_pad_size, bot_pad_size))
+          f.write(top_pad_rr(0, 0, 0, top_pad_size, top_pad_size))
+
+        else:
+          f.write(bot_pad(i * rows + r, r * rm, i * rm, bot_pad_size))
+          f.write(top_pad(i * rows + r, r * rm, i * rm, top_pad_size))
+
+        f.write(th_pad(i * rows + r, r * rm, i * rm, drill_pad_size, drill_size))
+
+    f.write(footer())
+
+def pin_RM254_angled_gen(pins, rows):
+  rm = 2.54
+  filename = "Pin_Header_RM" + str(rm) + "_" + str(rows) + "x" + str(pins) + "_ANGLED"
+  top_pad_size = 1.5
+  bot_pad_size = 1.75
+  drill_size = 1
+  drill_pad_size = drill_size + 0.3
+
+  with open(filename + ".kicad_mod", mode = "w+") as f:
+    f.write(header("stmbl", filename))
+
+    # outline
+    f.write(rect(-rm / 2, -rm / 2, (rows - 1) * rm + rm / 2, rm * (pins - 1) + rm / 2))
+    f.write(rect(-rm / 2, -rm / 2, rm / 2, rm / 2))
+
+    f.write(rect((rows - 1) * rm + 1.5, -rm / 2, (rows - 1) * rm + 4, rm * (pins - 1) + rm / 2))
+
+    for i in range(pins):
+      f.write(rect((rows - 1) * rm + 1, i * rm - 0.25, (rows - 1) * rm + 10.5, i * rm + 0.25))
+    
+    for r in range(rows):
+      for i in range(pins):
+        if r == 0 and i == 0:
+          f.write(bot_pad_rr(0, 0, 0, bot_pad_size, bot_pad_size))
+          f.write(top_pad_rr(0, 0, 0, top_pad_size, top_pad_size))
+
+        else:
+          f.write(bot_pad(i * rows + r, r * rm, i * rm, bot_pad_size))
+          f.write(top_pad(i * rows + r, r * rm, i * rm, top_pad_size))
+
+        f.write(th_pad(i * rows + r, r * rm, i * rm, drill_pad_size, drill_size))
+
+    f.write(footer())
+
+def socket_RM254_angled_gen(pins, rows):
+  rm = 2.54
+  filename = "Socket_RM" + str(rm) + "_" + str(rows) + "x" + str(pins) + "_ANGLED"
+  top_pad_size = 1.5
+  bot_pad_size = 1.75
+  drill_size = 1
+  drill_pad_size = drill_size + 0.3
+
+  with open(filename + ".kicad_mod", mode = "w+") as f:
+    f.write(header("stmbl", filename))
+
+    # outline
+    f.write(rect(-rm / 2, -rm / 2, (rows - 1) * rm + rm / 2, rm * (pins - 1) + rm / 2))
+    f.write(rect(-rm / 2, -rm / 2, rm / 2, rm / 2))
+
+    f.write(rect(-12.5, -rm / 2, -rm / 2, rm * (pins - 1) + rm / 2))
     
     for r in range(rows):
       for i in range(pins):
@@ -142,3 +207,7 @@ for p in pins:
   pin_RM254_smd_up_2x_gen(p)
   pin_RM254_up_gen(p, 1)
   pin_RM254_up_gen(p, 2)
+  pin_RM254_angled_gen(p, 1)
+  pin_RM254_angled_gen(p, 2)
+  socket_RM254_angled_gen(p, 1)
+  socket_RM254_angled_gen(p, 2)
