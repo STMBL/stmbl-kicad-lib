@@ -128,7 +128,7 @@ def parse_place(node):
   if isinstance(node, list):
     for n in node:
       if isinstance(n, list):
-        if n[0] == Symbol('module'):
+        if n[0] == Symbol('module') or n[0] == Symbol('footprint'):
           parse_module(n)
 
 def parse_comp(comp):
@@ -281,3 +281,4 @@ if len(sys.argv) > 2:
   #   f.close()
 else:
   print("usage: bom_pos.py .net .net ... .kicad_pcb")
+
