@@ -4,6 +4,13 @@ from pprint import pprint
 
 pins = {}
 
+def print_ucf(net,loc,comment):
+  print("NET {} LOC = {} | IOSTANDARD = LVTTL | DRIVE = 24 | SLEW = SLOW ; # {}".format(
+    ('"'+net+'"').ljust(18),
+    ('"'+loc+'"').ljust(5),
+    comment))
+  return 0
+
 if len(sys.argv) > 2:
   net_list_file = sys.argv[2]
   designator = sys.argv[1]
@@ -50,8 +57,9 @@ if len(sys.argv) > 2:
             #print(pin)
     #print (pins)
 
-  pprint(pins)
-
+  #pprint(pins)
+  for pin,data in pins.items():
+    print_ucf(data['name'],pin,data['function'])
   #NET	"IOBITS<43>"	LOC = "C13"	| IOSTANDARD = LVTTL | DRIVE = 24 | SLEW = SLOW ;	# Bank0 L63P_SCP7
 
 else:
