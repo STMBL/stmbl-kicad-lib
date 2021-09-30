@@ -109,6 +109,7 @@ def parse_module(module):
           attr = n[1]
       if n[0] == Symbol('fp_text'):
         if n[1] == Symbol('reference'):
+          print(n[2])
           if isinstance(n[2], Symbol):
             ref = n[2]._val
           else:

@@ -48,7 +48,7 @@ def eurostyle_RM762_up_gen(pins):
         f.write(line(-3.8, -4.5, rm * (pins - 1) + 3.8, -4.5))
 
         # plug outline
-        f.write(rect(-rm / 2, 3.75, rm * (pins - 1) + rm / 2, -11.25, "Margin"))
+        f.write(rect(-rm / 2, 3.75, rm * (pins - 1) + rm / 2, -11.25, "F.SilkS"))
         
         f.write(line(-rm / 2, -4, rm * (pins - 1) + rm / 2, -4))
         f.write(line(-rm / 2, -4, -rm / 2, 2.5))
@@ -60,7 +60,7 @@ def eurostyle_RM762_up_gen(pins):
             f.write(arc(rm * i, 0, rm * i - rm / 2, 2.5, -45))
             f.write(arc(rm * i, 0, rm * i + rm / 2, 2.5, 45))
 
-            f.write(rect(rm * i - 1.25, 1, rm * i + 1.25, -1.25, "Margin"))
+            f.write(rect(rm * i - 1.25, 1, rm * i + 1.25, -1.25, "F.SilkS"))
 
         f.write(footer())
 
@@ -80,15 +80,15 @@ def eurostyle_RM762_gen(pins):
         f.write(line(-3.8, 7, rm * (pins - 1) + 3.8, 7))
 
         # plug outline
-        f.write(line(-rm / 2, 20, rm * (pins - 1) + rm / 2, 20, "Margin"))
-        f.write(line(-rm / 2, 20, -rm / 2, 10, "Margin"))
-        f.write(line(rm * (pins - 1) + rm / 2, 20, rm * (pins - 1) + rm / 2, 10, "Margin"))
+        f.write(line(-rm / 2, 20, rm * (pins - 1) + rm / 2, 20, "F.SilkS"))
+        f.write(line(-rm / 2, 20, -rm / 2, 10, "F.SilkS"))
+        f.write(line(rm * (pins - 1) + rm / 2, 20, rm * (pins - 1) + rm / 2, 10, "F.SilkS"))
         
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
             f.write(bot_pad(i, rm * i, 0, pad_size))
-            f.write(circle(rm * i, 15, rm * i, 15 - 1.5, "Margin"))
-            f.write(line(rm * i - 1.5, 15, rm * i + 1.5, 15, "Margin"))
+            f.write(circle(rm * i, 15, rm * i, 15 - 1.5, "F.SilkS"))
+            f.write(line(rm * i - 1.5, 15, rm * i + 1.5, 15, "F.SilkS"))
 
         f.write(footer())
 
@@ -107,7 +107,7 @@ def eurostyle_RM508_up_gen(pins):
         f.write(line(-3.5, -4.5, rm * (pins - 1) + 3.5, -4.5))
 
         # plug outline
-        f.write(rect(-rm / 2, 3.75, rm * (pins - 1) + rm / 2, -11.25, "Margin"))
+        f.write(rect(-rm / 2, 3.75, rm * (pins - 1) + rm / 2, -11.25, "F.SilkS"))
         
         f.write(line(-rm / 2, -4, rm * (pins - 1) + rm / 2, -4))
         f.write(line(-rm / 2, -4, -rm / 2, 2.5))
@@ -119,7 +119,7 @@ def eurostyle_RM508_up_gen(pins):
             f.write(arc(rm * i, 0, rm * i - rm / 2, 2.5, -45))
             f.write(arc(rm * i, 0, rm * i + rm / 2, 2.5, 45))
 
-            f.write(rect(rm * i - 1.25, 1, rm * i + 1.25, -1.25, "Margin"))
+            f.write(rect(rm * i - 1.25, 1, rm * i + 1.25, -1.25, "F.SilkS"))
 
         f.write(footer())
 
@@ -139,15 +139,15 @@ def eurostyle_RM508_gen(pins):
         f.write(line(-3.5, 8, rm * (pins - 1) + 3.5, 8))
 
         # plug outline
-        f.write(line(-rm / 2, 20, rm * (pins - 1) + rm / 2, 20, "Margin"))
-        f.write(line(-rm / 2, 20, -rm / 2, 10, "Margin"))
-        f.write(line(rm * (pins - 1) + rm / 2, 20, rm * (pins - 1) + rm / 2, 10, "Margin"))
+        f.write(line(-rm / 2, 20, rm * (pins - 1) + rm / 2, 20, "F.SilkS"))
+        f.write(line(-rm / 2, 20, -rm / 2, 10, "F.SilkS"))
+        f.write(line(rm * (pins - 1) + rm / 2, 20, rm * (pins - 1) + rm / 2, 10, "F.SilkS"))
         
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
             f.write(bot_pad(i, rm * i, 0, pad_size))
-            f.write(circle(rm * i, 14, rm * i, 14 - 1.5, "Margin"))
-            f.write(line(rm * i - 1.5, 14, rm * i + 1.5, 14, "Margin"))
+            f.write(circle(rm * i, 14, rm * i, 14 - 1.5, "F.SilkS"))
+            f.write(line(rm * i - 1.5, 14, rm * i + 1.5, 14, "F.SilkS"))
 
         f.write(footer())
 
@@ -165,7 +165,7 @@ def eurostyle_RM350_up_gen(pins):
         f.write(rect(-2.5, 3, rm * (pins - 1) + 2.5, -4))
 
         # plug outline
-        f.write(rect(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, -5, "Margin"))
+        f.write(rect(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, -5, "F.SilkS"))
                
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
@@ -175,7 +175,7 @@ def eurostyle_RM350_up_gen(pins):
             f.write(line(rm * i - rm / 2, -3, rm * i - rm / 2 + 1, -3))
             f.write(line(rm * i + rm / 2, -3, rm * i + rm / 2 - 1, -3))
 
-            f.write(rect(rm * i - 1, 4, rm * i + 1, 1.5, "Margin"))
+            f.write(rect(rm * i - 1, 4, rm * i + 1, 1.5, "F.SilkS"))
 
         f.write(footer())
 
@@ -193,15 +193,15 @@ def eurostyle_RM350_gen(pins):
         f.write(rect(-2.5, 8, rm * (pins - 1) + 2.5, -1.25))
 
         # plug outline
-        f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "Margin"))
-        f.write(line(-rm / 2, 17, -rm / 2, 8, "Margin"))
-        f.write(line(rm * (pins - 1) + rm / 2, 17, rm * (pins - 1) + rm / 2, 8, "Margin"))
+        f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "F.SilkS"))
+        f.write(line(-rm / 2, 17, -rm / 2, 8, "F.SilkS"))
+        f.write(line(rm * (pins - 1) + rm / 2, 17, rm * (pins - 1) + rm / 2, 8, "F.SilkS"))
         
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
             f.write(bot_pad(i, rm * i, 0, pad_size))
-            f.write(circle(rm * i, 12, rm * i, 12 - 1.5, "Margin"))
-            f.write(line(rm * i - 1.5, 12, rm * i + 1.5, 12, "Margin"))
+            f.write(circle(rm * i, 12, rm * i, 12 - 1.5, "F.SilkS"))
+            f.write(line(rm * i - 1.5, 12, rm * i + 1.5, 12, "F.SilkS"))
 
         f.write(footer())
 
@@ -220,7 +220,7 @@ def eurostyle_RM381_up_gen(pins):
         f.write(rect(-2.5, 3, rm * (pins - 1) + 2.5, -4))
 
         # plug outline
-        f.write(rect(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, -5, "Margin"))
+        f.write(rect(-rm / 2, 6.5, rm * (pins - 1) + rm / 2, -5, "F.SilkS"))
        
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
@@ -230,7 +230,7 @@ def eurostyle_RM381_up_gen(pins):
             f.write(line(rm * i - rm / 2, -3, rm * i - rm / 2 + 1, -3))
             f.write(line(rm * i + rm / 2, -3, rm * i + rm / 2 - 1, -3))
 
-            f.write(rect(rm * i - 1, 4, rm * i + 1, 1.5, "Margin"))
+            f.write(rect(rm * i - 1, 4, rm * i + 1, 1.5, "F.SilkS"))
 
         f.write(footer())
 
@@ -248,15 +248,15 @@ def eurostyle_RM381_gen(pins):
         f.write(rect(-2.5, 8, rm * (pins - 1) + 2.5, -1.25))
 
         # plug outline
-        f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "Margin"))
-        f.write(line(-rm / 2, 17, -rm / 2, 8, "Margin"))
-        f.write(line(rm * (pins - 1) + rm / 2, 17, rm * (pins - 1) + rm / 2, 8, "Margin"))
+        f.write(line(-rm / 2, 17, rm * (pins - 1) + rm / 2, 17, "F.SilkS"))
+        f.write(line(-rm / 2, 17, -rm / 2, 8, "F.SilkS"))
+        f.write(line(rm * (pins - 1) + rm / 2, 17, rm * (pins - 1) + rm / 2, 8, "F.SilkS"))
         
         for i in range(pins):
             f.write(th_pad(i, rm * i, 0, drill_pad_size, drill_size))
             f.write(bot_pad(i, rm * i, 0, pad_size))
-            f.write(circle(rm * i, 12, rm * i, 12 - 1.5, "Margin"))
-            f.write(line(rm * i - 1.5, 12, rm * i + 1.5, 12, "Margin"))
+            f.write(circle(rm * i, 12, rm * i, 12 - 1.5, "F.SilkS"))
+            f.write(line(rm * i - 1.5, 12, rm * i + 1.5, 12, "F.SilkS"))
 
         f.write(footer())
 
