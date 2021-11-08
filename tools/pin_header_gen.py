@@ -29,18 +29,29 @@ def footer():
 def th_pad(name, x, y, size, drill):
   return("  (pad " + str(name + 1) + " thru_hole circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (drill " + str(drill) + ") (layers *.Cu *.Mask))\n")
 
-def top_pad_rr(name, x, y, size_x, size_y):
-  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask) (roundrect_rratio 0.25))\n")
+def top_pad_rr(name, x, y, size_x, size_y, paste=0):
+  if paste:
+    return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask F.Paste) (roundrect_rratio 0.25))\n")
+  else:
+    return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers F.Cu F.Mask) (roundrect_rratio 0.25))\n")
 
-def top_pad(name, x, y, size):
-  return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers F.Cu F.Mask))\n")
+def top_pad(name, x, y, size, paste=0):
+  if paste:
+    return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers F.Cu F.Mask F.Paste))\n")
+  else:
+    return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers F.Cu F.Mask))\n")
 
-def bot_pad_rr(name, x, y, size_x, size_y):
-  return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers B.Cu B.Mask) (roundrect_rratio 0.25))\n")
+def bot_pad_rr(name, x, y, size_x, size_y, paste=0):
+  if paste:
+    return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers B.Cu B.Mask B.Paste) (roundrect_rratio 0.25))\n")
+  else:
+    return("  (pad " + str(name + 1) + " smd roundrect (at " + str(x) + " " + str(y) + ") (size " + str(size_x) + " " + str(size_y) + ") (layers B.Cu B.Mask) (roundrect_rratio 0.25))\n")
 
-def bot_pad(name, x, y, size):
-  return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers B.Cu B.Mask))\n")
-
+def bot_pad(name, x, y, size, paste=0):
+  if paste:
+    return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers B.Cu B.Mask B.Paste))\n")
+  else:
+    return("  (pad " + str(name + 1) + " smd circle (at " + str(x) + " " + str(y) + ") (size " + str(size) + " " + str(size) + ") (layers B.Cu B.Mask))\n")
 
 def pin_RM2_up_gen(pins, rows):
   rm = 2
@@ -215,9 +226,9 @@ def pin_RM254_smd_up_1x_gen(pins):
     
     for i in range(pins):
       if i % 2 == 0:
-        f.write(top_pad_rr(i, 1.5, i * rm, pad_size_x, pad_size_y))
+        f.write(top_pad_rr(i, 1.5, i * rm, pad_size_x, pad_size_y, 1))
       else:
-        f.write(top_pad_rr(i, -1.5, i * rm, pad_size_x, pad_size_y))
+        f.write(top_pad_rr(i, -1.5, i * rm, pad_size_x, pad_size_y, 1))
 
     f.write(footer())
 
@@ -237,9 +248,9 @@ def pin_RM254_smd_up_1x_inv_gen(pins):
     
     for i in range(pins):
       if i % 2 == 0:
-        f.write(top_pad_rr(i, -1.5, i * rm, pad_size_x, pad_size_y))
+        f.write(top_pad_rr(i, -1.5, i * rm, pad_size_x, pad_size_y, 1))
       else:
-        f.write(top_pad_rr(i, 1.5, i * rm, pad_size_x, pad_size_y))
+        f.write(top_pad_rr(i, 1.5, i * rm, pad_size_x, pad_size_y, 1))
 
     f.write(footer())
 
@@ -258,23 +269,23 @@ def pin_RM254_smd_up_2x_gen(pins):
     f.write(rect(-rm / 2, -rm / 2, rm / 2, rm / 2))
     
     for i in range(pins):
-      f.write(top_pad_rr(i * rows + 0, 1.5, i * rm, pad_size_x, pad_size_y))
-      f.write(top_pad_rr(i * rows + 1, -rm - 1.5, i * rm, pad_size_x, pad_size_y))
+      f.write(top_pad_rr(i * rows + 0, 1.5, i * rm, pad_size_x, pad_size_y, 1))
+      f.write(top_pad_rr(i * rows + 1, -rm - 1.5, i * rm, pad_size_x, pad_size_y, 1))
 
     f.write(footer())
 
 
 for p in pins: 
-  #pin_RM254_smd_up_1x_gen(p)
-  #pin_RM254_smd_up_1x_inv_gen(p)
-  #pin_RM254_smd_up_2x_gen(p)
+  pin_RM254_smd_up_1x_gen(p)
+  pin_RM254_smd_up_1x_inv_gen(p)
+  pin_RM254_smd_up_2x_gen(p)
   #pin_RM254_up_gen(p, 1)
   #pin_RM254_up_gen(p, 2)
   #pin_RM254_angled_gen(p, 1)
   #pin_RM254_angled_gen(p, 2)
   #socket_RM254_angled_gen(p, 1)
   #socket_RM254_angled_gen(p, 2)
-  pin_RM2_up_gen(p, 1)
-  pin_RM2_up_gen(p, 2)
-  pin_RM2_angled_gen(p, 1)
-  pin_RM2_angled_gen(p, 2)
+  #pin_RM2_up_gen(p, 1)
+  #pin_RM2_up_gen(p, 2)
+  #pin_RM2_angled_gen(p, 1)
+  #pin_RM2_angled_gen(p, 2)
