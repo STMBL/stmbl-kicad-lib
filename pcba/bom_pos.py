@@ -22,7 +22,6 @@ part_map = [
   ("16M", "stmbl:Crystal_SMD_3225_4Pads", "C13738"),
   ("25M", "stmbl:Crystal_SMD_3225_4Pads", "C9006"),
   ("12M", "stmbl:Crystal_SMD_3225_4Pads", "C9002"),
-  ("12pf", "stmbl:C_0603", "C38523"),
   ("SMCJ75A", "stmbl:D_SMC", "C184464"),
   ("STM32F303RCTx", "stmbl:LQFP-64_12x12_Pitch0.5mm", "C65361"),
   ("4.7u 1.5A", "stmbl:MWSA0503", "C408410"),
@@ -32,6 +31,7 @@ part_map = [
   ("2.7k", "stmbl:R_0603", "C13167"),
   ("30k", "stmbl:R_0603", "C22984"),
   ("56k", "stmbl:R_0603", "C23206"),
+  ("10k", "stmbl:R_0402", "C25744"),
   ("10k", "stmbl:R_0603", "C25804"),
   ("100k", "stmbl:R_0603", "C25803"),
   ("EMI", "stmbl:R_0603", "C1034"),
@@ -60,16 +60,18 @@ part_map = [
   ("100u 1A", "stmbl:SWRB1204S", "C169400"),
   ("100n", "stmbl:C_0402", "C1525"),
   ("1n", "stmbl:C_0402", "C1523"),
+  ("18p", "stmbl:C_0402", "C1549"),
+  ("1u", "stmbl:C_0402", "C52923"),
   ("1u", "stmbl:C_0603", "C15849"),
   ("smaj48a", "stmbl:SMA_Standard", "C309892"),
   ("3.3V", "stmbl:minimelf", "C8056"),
   ("es1j", "stmbl:SMA_Standard", "C115404"),
   ("10A", "stmbl:FUSE_0451", "C44479"),
-  ("CONN_01X02", "stmbl:RM3.5_1x2_UP", "C192777"),
+  #("CONN_01X02", "stmbl:RM3.5_1x2_UP", "C192777"),
   ("RJ45_LED", "stmbl:RJ45_LED_UP", "C386764"),
   ("3.5-5P", "stmbl:RM3.5_1x5_UP", "C880557"),
-  ("CONN_02X06_Odd_Even", "stmbl:Pin_Header_RM2_2x6_ANGLED", "C225298"),
-  ("3.5-4P", "stmbl:RM3.5_1x4_UP", "C880556"),
+  #("CONN_02X06_Odd_Even", "stmbl:Pin_Header_RM2_2x6_ANGLED", "C225298"),
+  #("3.5-4P", "stmbl:RM3.5_1x4_UP", "C880556"),
   ("470", "stmbl:R_0402", "C25117"),
   ("60", "stmbl:R_0402", "C4962"),
   ("1.5k", "stmbl:R_0402", "C25867"),
@@ -79,12 +81,13 @@ part_map = [
   ("33", "stmbl:R_0402", "C25105"),
   ("TLP2362", "stmbl:SO-6", "C37658"),
   ("EL357N", "stmbl:SOP-4", "C29981"),
+  ("SM712", "stmbl:SOT-23", "C293966"),
 ]
 
 rot_package = [("stmbl:Pin_Header_RM2_2x6_ANGLED", -90.0), ("stmbl:QFN-28_EP_5x5_Pitch0.5mm", -90.0), ("stmbl:SOT-223", 180.0), ("stmbl:SOIC-16", -90.0), ("stmbl:SOT-23-5", -180.0), ("stmbl:SOT-23-6", -180.0), ("stmbl:SOT-23", -180.0), ("stmbl:SOIC-8-N", -90.0), ("stmbl:SOIC-8-POWER", -90.0), ("stmbl:Oscillator_SMD_0603_4Pads", -90.0), ("stmbl:LQFP-48_7x7mm_Pitch0.5mm", -90.0), ("stmbl:LQFP-64_12x12_Pitch0.5mm", -90.0), ("stmbl:CP_D6.3", -180.0), ("stmbl:SWRB1204S", -180.0), ("stmbl:MWSA0503", -180.0), ("stmbl:WS2812B-3535", 180.0), ("stmbl:wsp2812b", 180.0)]
-rot_part = [("C383538", 90.0), ("C123083", 90.0)]
+rot_part = [("C37448", -90.0), ("C383538", 0.0), ("C123083", 90.0)]
 
-package_remap = [("R_0805", "0805"), ("R_0603", "0603"), ("R_0402", "0402"), ("C_0805", "0805"), ("C_0603", "0603"), ("C_0402", "0402")]
+package_remap = [("R_2512", "2512"), ("R_1206", "1206"), ("R_0805", "0805"), ("R_0603", "0603"), ("R_0402", "0402"), ("C_1812", "1812"), ("C_1808", "1808"), ("C_0805", "0805"), ("C_0603", "0603"), ("C_0402", "0402")]
 
 # ("C37448", -90.0), ("C9669", -90.0)
 
