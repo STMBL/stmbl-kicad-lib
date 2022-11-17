@@ -82,6 +82,8 @@ part_map = [
   ("TLP2362", "stmbl:SO-6", "C37658"),
   ("EL357N", "stmbl:SOP-4", "C29981"),
   ("SM712", "stmbl:SOT-23", "C293966"),
+  ("220", "stmbl:R_0402", "C25091"),
+  ("1H05", "stmbl:SOT-23", "C237256"),
 ]
 
 rot_package = [("stmbl:Pin_Header_RM2_2x6_ANGLED", -90.0), ("stmbl:QFN-28_EP_5x5_Pitch0.5mm", -90.0), ("stmbl:SOT-223", 180.0), ("stmbl:SOIC-16", -90.0), ("stmbl:SOT-23-5", -180.0), ("stmbl:SOT-23-6", -180.0), ("stmbl:SOT-23", -180.0), ("stmbl:SOIC-8-N", -90.0), ("stmbl:SOIC-8-POWER", -90.0), ("stmbl:Oscillator_SMD_0603_4Pads", -90.0), ("stmbl:LQFP-48_7x7mm_Pitch0.5mm", -90.0), ("stmbl:LQFP-64_12x12_Pitch0.5mm", -90.0), ("stmbl:CP_D6.3", -180.0), ("stmbl:SWRB1204S", -180.0), ("stmbl:MWSA0503", -180.0), ("stmbl:WS2812B-3535", 180.0), ("stmbl:wsp2812b", 180.0)]
