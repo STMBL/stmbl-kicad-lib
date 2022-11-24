@@ -84,10 +84,18 @@ part_map = [
   ("SM712", "stmbl:SOT-23", "C293966"),
   ("220", "stmbl:R_0402", "C25091"),
   ("1H05", "stmbl:SOT-23", "C237256"),
+  ("TD1836", "stmbl:SOT-23-6", "C2935198"),
+  ("ss210", "stmbl:SMA_Standard", "C14996"),
+  ("4.7u", "stmbl:C_0805", "C98192"),
+  ("CONN_01X08", "stmbl:KEFA_KF2EDGSVMG_RM3.5_2x4", "C2923253"),
+  ("CONN_01X04", "stmbl:KEFA_KF2EDGSVMG_RM3.5_2x2", "C2923251"),
+  ("CONN_02X06_Odd_Even", "stmbl:Pin_Header_RM2_2x6_ANGLED", "C707001"),
+  ("68u 1A", "stmbl:L_6x6", "C341069"),
+  ("RS422", "stmbl:SOIC-8-N", "C19128"),
 ]
 
-rot_package = [("stmbl:Pin_Header_RM2_2x6_ANGLED", -90.0), ("stmbl:QFN-28_EP_5x5_Pitch0.5mm", -90.0), ("stmbl:SOT-223", 180.0), ("stmbl:SOIC-16", -90.0), ("stmbl:SOT-23-5", -180.0), ("stmbl:SOT-23-6", -180.0), ("stmbl:SOT-23", -180.0), ("stmbl:SOIC-8-N", -90.0), ("stmbl:SOIC-8-POWER", -90.0), ("stmbl:Oscillator_SMD_0603_4Pads", -90.0), ("stmbl:LQFP-48_7x7mm_Pitch0.5mm", -90.0), ("stmbl:LQFP-64_12x12_Pitch0.5mm", -90.0), ("stmbl:CP_D6.3", -180.0), ("stmbl:SWRB1204S", -180.0), ("stmbl:MWSA0503", -180.0), ("stmbl:WS2812B-3535", 180.0), ("stmbl:wsp2812b", 180.0)]
-rot_part = [("C37448", -90.0), ("C383538", 0.0), ("C123083", 90.0)]
+rot_package = [("stmbl:QFN-28_EP_5x5_Pitch0.5mm", -90.0), ("stmbl:SOT-223", 180.0), ("stmbl:SOIC-16", -90.0), ("stmbl:SOT-23-5", -180.0), ("stmbl:SOT-23-6", -180.0), ("stmbl:SOT-23", -180.0), ("stmbl:SOIC-8-N", -90.0), ("stmbl:SOIC-8-POWER", -90.0), ("stmbl:Oscillator_SMD_0603_4Pads", -90.0), ("stmbl:LQFP-48_7x7mm_Pitch0.5mm", -90.0), ("stmbl:LQFP-64_12x12_Pitch0.5mm", -90.0), ("stmbl:CP_D6.3", -180.0), ("stmbl:SWRB1204S", -180.0), ("stmbl:MWSA0503", -180.0), ("stmbl:WS2812B-3535", 180.0), ("stmbl:wsp2812b", 180.0)]
+rot_part = [("C707001", 90.0), ("C225298", -90.0), ("C37448", -90.0), ("C383538", 0.0), ("C123083", 90.0)]
 
 package_remap = [("R_2512", "2512"), ("R_1206", "1206"), ("R_0805", "0805"), ("R_0603", "0603"), ("R_0402", "0402"), ("C_1812", "1812"), ("C_1808", "1808"), ("C_0805", "0805"), ("C_0603", "0603"), ("C_0402", "0402")]
 
